@@ -4,6 +4,6 @@
 class CoffeeOrder : public DrinkOrder
 {
 public:
-    CoffeeOrder(std::string client, bool isHot, int orderId);
+    CoffeeOrder(Customer *client, bool isHot, int orderId);
     void prepareDrink();
 };

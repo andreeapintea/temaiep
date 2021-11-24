@@ -3,7 +3,9 @@
 
 class LatteOrder : public DrinkOrder
 {
+    bool hasChocolate_;
 public:
-    LatteOrder(std::string client, bool isHot, int orderId);
+    LatteOrder(Customer *client, bool isHot, int orderId, bool hasChocolate);
     void prepareDrink();
+    LatteOrder& operator=(const LatteOrder& rhs);
 };

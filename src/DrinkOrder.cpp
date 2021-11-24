@@ -1,11 +1,11 @@
 #include "DrinkOrder.hpp"
 
-DrinkOrder::DrinkOrder(std::string client, bool isHot, int orderId) : client_(client), isHot_(isHot), orderId_(orderId)
+DrinkOrder::DrinkOrder(Customer *client, bool isHot, int orderId) : client_(client), isHot_(isHot), orderId_(orderId)
 {} 
 
 void DrinkOrder::startPreparing()
 {
-    std::cout<<"\nHello "<<client_<<" your order will be ready soon!\n";
+    std::cout<<"\nHello "<<client_->getName()<<" your order will be ready soon!\n";
 }
 
 void DrinkOrder::finishOrder()
@@ -28,4 +28,17 @@ void DrinkOrder::order()
     std::this_thread::sleep_for(std::chrono::seconds(3));
     finishOrder();
     std::this_thread::sleep_for(std::chrono::seconds(1));
+}
+
+DrinkOrder& DrinkOrder::operator=(const DrinkOrder& rhs)
+{
+    if (this == &rhs)
+        return *this;
+    Customer *originalCustomer = client_;
+    client_ = new Customer(*rhs.client_);
+    delete originalCustomer;
+    isHot_=rhs.isHot_;
+    orderId_=rhs.orderId_;
+
+    return *this;
 }

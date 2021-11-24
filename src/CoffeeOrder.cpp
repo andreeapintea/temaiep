@@ -1,6 +1,6 @@
 #include "CoffeeOrder.hpp"
 
-CoffeeOrder::CoffeeOrder(std::string client, bool isHot, int orderId) : DrinkOrder(client, isHot, orderId)
+CoffeeOrder::CoffeeOrder(Customer *client, bool isHot, int orderId) : DrinkOrder(client, isHot, orderId)
 {}
 
 void CoffeeOrder::prepareDrink()

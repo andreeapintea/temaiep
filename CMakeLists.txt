@@ -23,7 +23,9 @@ add_executable(${PROJECT_NAME}
                headers/CoffeeOrder.hpp
                headers/DrinkOrder.hpp
                headers/LatteOrder.hpp
+               headers/Customer.hpp
                src/CoffeeOrder.cpp
                src/LatteOrder.cpp
                src/DrinkOrder.cpp
+               src/Customer.cpp
                src/main.cpp)
