@@ -30,10 +30,18 @@ void DrinkOrder::order()
     std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 
+DrinkOrder::DrinkOrder(const DrinkOrder& drinkOrder)
+{
+    client_ = new Customer(*drinkOrder.client_);
+    isHot_ = drinkOrder.isHot_;
+    orderId_ = drinkOrder.orderId_;
+
+}
+
 DrinkOrder& DrinkOrder::operator=(const DrinkOrder& rhs)
 {
     if (this == &rhs)
-        return *this;
+       return *this;
     Customer *originalCustomer = client_;
     client_ = new Customer(*rhs.client_);
     delete originalCustomer;

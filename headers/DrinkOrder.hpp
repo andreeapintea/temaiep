@@ -20,4 +20,5 @@ public:
     //DrinkOrder(const DrinkOrder&) = delete;
     //DrinkOrder& operator=(const DrinkOrder&) = delete;
     DrinkOrder& operator=(const DrinkOrder& rhs);
+    DrinkOrder(const DrinkOrder& drinkOrder);
 };

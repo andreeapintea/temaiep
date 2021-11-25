@@ -8,4 +8,5 @@ public:
     LatteOrder(Customer *client, bool isHot, int orderId, bool hasChocolate);
     void prepareDrink();
     LatteOrder& operator=(const LatteOrder& rhs);
+    LatteOrder(const LatteOrder& latteOrder);
 };
