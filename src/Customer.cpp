@@ -14,3 +14,9 @@ std::string Customer::getName()
 {
     return name_;
 }
+
+void Customer::eatCake(std::shared_ptr<Cake> cake)
+{
+    std::cout<<"I am eating "<<cake->getFlavour()<<" cake!"<<std::endl;
+
+}

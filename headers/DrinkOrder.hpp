@@ -21,4 +21,5 @@ public:
     //DrinkOrder& operator=(const DrinkOrder&) = delete;
     DrinkOrder& operator=(const DrinkOrder& rhs);
     DrinkOrder(const DrinkOrder& drinkOrder);
+    int getOrderId();
 };

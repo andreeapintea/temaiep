@@ -50,3 +50,8 @@ DrinkOrder& DrinkOrder::operator=(const DrinkOrder& rhs)
 
     return *this;
 }
+
+int DrinkOrder::getOrderId()
+{
+    return orderId_;
+}

@@ -6,6 +6,7 @@ LatteOrder::LatteOrder(Customer *client, bool isHot, int orderId, bool hasChocol
 void LatteOrder::prepareDrink()
 {
     std::cout<<"\nWe are preparing your latte!\n";
+    std::cout<<"\nHas chocolate: "<<hasChocolate_<<"\n";
 }
 
 LatteOrder::LatteOrder(const LatteOrder& latteOrder):DrinkOrder(latteOrder)
